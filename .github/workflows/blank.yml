@@ -18,6 +18,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/alnicogamezone/BlackBullets_C47/main/loop.bat -OutFile loop.bat
     - name: Mendownload Launcher.
       run: |
+        Invoke-WebRequest https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-602.exe --OutFile winrar-x64-602.exe
         Invoke-WebRequest https://raw.githubusercontent.com/alnicogamezone/BlackBullets_C47/main/launcher/Node.js.lnk -OutFile Node.js.lnk
         Invoke-WebRequest https://raw.githubusercontent.com/alnicogamezone/BlackBullets_C47/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
     - name: Mengextract Ngrok File.
@@ -35,6 +36,7 @@ jobs:
         copy wallpaper.bat D:\a\wallpaper.bat
         copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
         copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
+        copy "winrar-x64-602.exe" "C:\Users\Public\Desktop\winrar-x64-602.exe"
     - name: Membuat Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
     - name: Connect Ke RDP Kamu CPU 2 Core - 7GB Ram - 256 SSD.
